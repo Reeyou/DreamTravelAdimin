@@ -4,6 +4,7 @@
       :welcomeTip='welcomeTip'
       :backTip='backTip'
       :backTip_register='backTip_register'
+      :backTip_login='backTip_login'
       :fixed='fixed'
     />
     <div class="wrapper_home" >
@@ -74,6 +75,7 @@ export default {
     return {
       welcomeTip: '享梦游后台管理平台',
       backTip: '登录',
+      backTip_login: true,
       backTip_register: '注册',
       fixed: true,
       items: ['','','','',''],
