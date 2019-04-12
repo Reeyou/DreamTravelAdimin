@@ -4,7 +4,7 @@ import Index from '@/container/Index'
 import Login from '@/container/Index/login'
 import Register from '@/container/Index/register'
 import ResetPwd from '@/container/Index/ResetPwd'
-import Home from '@/container/Home/Index'
+import Home from '@/container/Home/index'
 
 Vue.use(Router)
 

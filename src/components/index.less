@@ -2,9 +2,9 @@
 
 .nav {
   width: 100%;
-  height: 80px;
-  line-height: 80px;
-  color: @fontBlack;
+  height: 70px;
+  line-height: 70px;
+  color: @Black;
   position: fixed;
   top: 0;
   div {
@@ -15,7 +15,7 @@
       width: 160px;
       height: 70px;
       float: left;
-      background-image: url(../assets/logo-black.png);
+      background-image: url(/static/img/logo-black.png);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       cursor: pointer;
@@ -34,7 +34,7 @@
         content: '';
         width: 1px;
         height: 30px;
-        background: @fontBlackRgb;
+        background: @BlackRgb;
         position: absolute;
         top: 22px;
         left: 160px;
@@ -43,7 +43,7 @@
     .welcome {
       font-size: 18px;
       font-weight: 500;
-      color: @fontBlack;
+      color: @Black;
     }
     .home_register {
       float: right;
@@ -51,14 +51,14 @@
       a {
         font-size: 14px;
         font-weight: 500;
-        color: @fontBlack;
+        color: @Black;
         padding: 8px 30px;
         border: @borderBlack;
         border-radius: 3px;
         transition: all 200ms ease-in-out;
         -webkit-transition: all 200ms ease-in-out;
         &:hover {
-          color: @fontBlackRgb;
+          color: @BlackRgb;
           border: @borderBlackRgb;
           cursor: pointer;
         }
@@ -69,14 +69,14 @@
       a {
         font-size: 14px;
         font-weight: 500;
-        color: @fontBlack;
+        color: @Black;
         padding: 8px 30px;
         border: @borderBlack;
         border-radius: 3px;
         transition: all 200ms ease-in-out;
         -webkit-transition: all 200ms ease-in-out;
         &:hover {
-          color: @fontBlackRgb;
+          color: @BlackRgb;
           cursor: pointer;
           border: @borderBlackRgb;
         }
@@ -95,16 +95,22 @@
   width: 100%;
   height: 80px;
   background: #FFF;
-  box-shadow: 0px 0px 1px 0px @fontBlackRgbO;
+  box-shadow: 0px 0px 1px 0px @BlackRgbO;
   z-index: 999;
   animation: fixedFadein 1000ms ease;
 }
 .noFixed {
   animation: fixedFadeout 1000ms ease;
 }
-.shadow {
-  box-shadow: 0px 0px 1px 0px @fontBlackRgbO;
+
+//内部首页nvHead
+.nvHome {
+  width: 200px;
   div {
     width: 100%;
+    margin: 0;
+    .logo {
+      float: none;
+    }
   }
 }

@@ -1,7 +1,26 @@
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-  min-height: 100vh;
-  margin-top: 80px;
-  position: fixed;
-  z-index: -999;
+@import '../../assets/css/common.less';
+
+#Home {
+  font-size: 0;
+  .container {
+    margin-left: 200px;
+    min-width: 1000px;
+    &_home {
+      width: 70%;
+    }
+    &_side {
+      width: 30%;
+      height: 100vh;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(31,31,33,.1);
+      }
+    }
+  }
 }

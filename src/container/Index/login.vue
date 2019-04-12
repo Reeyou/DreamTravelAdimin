@@ -15,7 +15,7 @@
             <input type="password" placeholder="登录密码">
           </div>
           <p class='error_msg' v-show='error_msg'>{{error_password}}</p>
-          <button>登录</button>
+          <button @click='login' type='button'>登录</button>
           <div class="tips">
             <span class='first'><a href="/#/resetPwd">忘记密码？</a></span>
             <span class='last'>没有账号？<a href="/#/register">前往注册</a></span>
@@ -41,7 +41,9 @@ export default {
     }
   },
   methods: {
-
+    login() {
+      this.$router.push({path: '/home'})
+    }
   },
   components: {
     navHeader

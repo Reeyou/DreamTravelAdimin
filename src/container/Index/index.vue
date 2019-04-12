@@ -1,10 +1,9 @@
 <template>
   <div>
     <nav-Header
-      :welcomeTip='welcomeTip'
+      :welcomeTip='false'
       :backTip='backTip'
       :backTip_register='backTip_register'
-      :backTip_login='backTip_login'
       :fixed='fixed'
     />
     <div class="wrapper_home" >
@@ -70,24 +69,24 @@
 <script>
 import navHeader from '../../components/Header'
 export default {
-  name: 'login',
+  name: 'index',
   data () {
     return {
-      welcomeTip: '享梦游后台管理平台',
       backTip: '登录',
-      backTip_login: true,
       backTip_register: '注册',
       fixed: true,
-      items: ['','','','',''],
+      items: ['', '', '', '', ''],
       delta: 0,
-      currentIndex: 0
+      currentIndex: 0,
+      lock: true,
+      delayTime: 400
     }
   },
   methods: {
     // 鼠标滚动函数
     scrollFunc (e) {
       // console.log(e)
-      if (!e) { // for ie
+      if (!e) { // 兼容 ie
         e = window.event
       }
       if (e.preventDefault) {
@@ -98,25 +97,40 @@ export default {
       } else if (e.detail) { // firefox
         this.delta = -e.detail / 3
       }
-      if(this.delta > 0 && this.currentIndex > 0){
-        this.currentIndex > 0 ? this.currentIndex-- : this.currentIndex = 0
-        this.moveCurrency()
+      if(this.delta > 0 && this.currentIndex > 0) {
+        const _this = this
+        if(this.lock) {
+          this.lock = false
+          setTimeout(function() { // 加锁操作,800ms后才能继续执行切换
+            _this.currentIndex > 0 ? _this.currentIndex-- : _this.currentIndex = 0
+            _this.moveCurrency()
+            _this.lock = true
+          }, this.delayTime)
+        }
       } else if (this.delta < 0 && this.currentIndex < 4) {
-        this.currentIndex >= 0 && this.currentIndex < 4 ? this.currentIndex++ : this.currentIndex = 4
-        this.moveCurrency()
+        const _this = this
+        if(this.lock) {
+          this.lock = false
+          setTimeout(function() {
+            _this.currentIndex >= 0 && _this.currentIndex < 4 ? _this.currentIndex++ : _this.currentIndex = 4
+            _this.moveCurrency()
+            _this.lock = true
+          }, this.delayTime)
+        }
       }
     },
     // 滚动函数
     moveCurrency () {
       document.documentElement.scrollTop = window.innerHeight * this.currentIndex
     },
-    //入口函数
+    // 入口函数
     init () {
+      // 绑定鼠标事件
       window.onmousewheel = this.scrollFunc
     },
-    //点击改变
+    // 点击改变
     changeCurrency (e) {
-      this.currentIndex = e;
+      this.currentIndex = e
       this.moveCurrency()
     }
   },
