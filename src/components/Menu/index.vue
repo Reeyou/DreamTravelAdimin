@@ -8,7 +8,8 @@
     >
     <!-- 不带子元素的menuItem -->
       <el-menu-item
-        v-for="menuItem in menuConfig"
+        v-for="(menuItem, index) in menuConfig"
+        :key='index'
         :index="menuItem.path"
         v-show="!menuItem.child"
       >
@@ -16,16 +17,16 @@
         <span slot="title">{{menuItem.name}}</span>
       </el-menu-item>
     <!-- 带子元素的menuItem -->
-      <el-submenu
-        v-for="menuItem in menuConfig"
+      <el-submenu    
         :index="menuItem.path"
+        :key='index'
         v-show="menuItem.child"
       >
         <template slot="title">
           <i :class="menuItem.icon"></i>
           <span slot="title">{{menuItem.name}}</span>
         </template>
-        <el-menu-item v-for="Item in menuItem.child" :index="Item.path">
+        <el-menu-item v-for="(Item, itemIndex) in menuItem.child" :key='itemIndex ' :index="Item.path">
           <span>{{Item.name}}</span>
         </el-menu-item>
       </el-submenu>

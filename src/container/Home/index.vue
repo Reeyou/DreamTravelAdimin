@@ -6,7 +6,7 @@
     />
     <!-- <Menu /> -->
     <div class='container'>
-      <Home class='container_home' />
+      <HomeMid class='container_home' />
       <Side class='container_side' />
     </div>
   </div>
@@ -15,7 +15,7 @@
 <script>
 import nvHead from '../../components/Header'
 import Menu from '../../components/Menu'
-import Home from '../../components/HomeContainer'
+import HomeMid from '../../components/HomeContainer'
 import Side from '../../components/RightSide'
 export default {
   name: 'Home',
@@ -27,7 +27,7 @@ export default {
   components: {
     nvHead,
     Menu,
-    Home,
+    HomeMid,
     Side
   }
 }
