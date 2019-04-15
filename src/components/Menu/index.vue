@@ -6,27 +6,30 @@
       :collapse="isCollapse"
       router
     >
-    <!-- 不带子元素的menuItem -->
+    <div>
+      <!-- 不带子元素的menuItem -->
       <el-menu-item
-        v-for="(menuItem, index) in menuConfig"
-        :key='index'
-        :index="menuItem.path"
+        v-for="menuItem in menuConfig"
+        :key='menuItem.key'
+        :index="menuItem.key"
         v-show="!menuItem.child"
       >
         <i :class="menuItem.icon"></i>
         <span slot="title">{{menuItem.name}}</span>
       </el-menu-item>
+    </div>
     <!-- 带子元素的menuItem -->
       <el-submenu    
-        :index="menuItem.path"
-        :key='index'
+        :index="menuItem.key"
+        :key='menuItem.key'
+        v-for="menuItem in menuConfig"
         v-show="menuItem.child"
       >
         <template slot="title">
           <i :class="menuItem.icon"></i>
           <span slot="title">{{menuItem.name}}</span>
         </template>
-        <el-menu-item v-for="(Item, itemIndex) in menuItem.child" :key='itemIndex ' :index="Item.path">
+        <el-menu-item v-for="Item in menuItem.child" :key='Item.key ' :index="Item.key">
           <span>{{Item.name}}</span>
         </el-menu-item>
       </el-submenu>

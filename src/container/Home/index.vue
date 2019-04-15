@@ -4,7 +4,7 @@
       :isHome='true'
       :welcomeTip='false'
     />
-    <!-- <Menu /> -->
+    <Menu />
     <div class='container'>
       <HomeMid class='container_home' />
       <Side class='container_side' />
@@ -17,6 +17,7 @@ import nvHead from '../../components/Header'
 import Menu from '../../components/Menu'
 import HomeMid from '../../components/HomeContainer'
 import Side from '../../components/RightSide'
+
 export default {
   name: 'Home',
   data () {
@@ -33,6 +34,6 @@ export default {
 }
 </script>
 
-<style src='./index.less' lang='less'>
+<style src='./index.less' scoped lang='less'>
 
 </style>

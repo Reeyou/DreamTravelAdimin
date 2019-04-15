@@ -5,12 +5,16 @@
   .container {
     margin-left: 200px;
     min-width: 1000px;
+    background: @bgWhite;
     &_home {
       width: 70%;
+      height: 100vh;
+      float: left;
     }
     &_side {
       width: 30%;
       height: 100vh;
+      display: inline-block;
       position: relative;
       &:after {
         content: '';
@@ -19,7 +23,7 @@
         height: 100vh;
         top: 0;
         left: 0;
-        background: rgba(31,31,33,.1);
+        background: @BlackRgbOO;
       }
     }
   }

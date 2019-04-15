@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header :class="{'nav': true,'fixed': fixed ,'noFixed': noFixed ,'nvHome': isHomeShow}">
+    <header :class="{'navBar': true,'fixed': fixed ,'noFixed': noFixed ,'nvHome': isHomeShow}">
       <div>
         <div :class="{'logo': true,'smallLog': isCollapse}" @click='backHome'></div>
         <span class='divide' v-show='divide_show'></span>
@@ -49,6 +49,6 @@ export default {
 }
 </script>
 
-<style src='./index.less' lang='less'>
+<style src='./index.less' scoped lang='less'>
 
 </style>

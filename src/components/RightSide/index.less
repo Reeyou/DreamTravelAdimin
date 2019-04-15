@@ -1,0 +1,158 @@
+@import '../../assets/css/common.less';
+/*
+----------- sideNav --------------
+*/
+.sideNav {
+  display: inline-block;
+  height: 70px;
+  background: @bgWhite;
+  margin-bottom: 40px;
+  width: 100%;
+  .nav {
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+    float: right;
+    position: absolute;
+    right: 20px;
+    &_container {
+      width: 160px;
+      height: 70px;
+      margin: 0 auto;
+      text-align: center;
+      .user {
+        display: inline-block;
+        width: 40px;
+        height: 70px;
+        .el-dropdown {
+          width: 100px;
+          height: 54px;
+        }
+        .el-dropdown-link {
+          cursor: pointer;
+          color: #409EFF;
+          .avatar {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background: #000;
+            vertical-align: middle;
+            display: inline-block;
+          }
+        }
+        .el-icon-arrow-down {
+          font-size: 12px;
+        }
+      }
+      .menu {
+        display: inline-block;
+        width: 40px;
+        margin: 0 0 0 60px;
+        vertical-align: middle;
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+/*
+----------- sideMid --------------
+*/
+.sideMid {
+  display: inline-block;
+  height: 520px;
+  width: 100%;
+  position: relative;
+  &:after {    
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: @BlackRgbOO;
+  }
+  &_con {
+    height: 100%;
+    padding: 0 80px;
+    &_top,
+    &_bottom {
+      height: 50%;
+      min-width: 230px;
+      .title {
+        h2 {
+          font-size: 18px;
+          color: @BlackRgbO;
+          display: inline-block;
+        }
+      }
+    }
+    &_top {
+      .list {
+        padding-top: 10px;
+        ul {
+          li {
+            font-size: 18px;
+            color: @BlackRgb;
+            margin: 30px 0;
+            &:first-child {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+    &_bottom {
+      > div {
+        padding-top: 10px;
+        ul {
+          li {
+            font-size: 18px;
+            color: @BlackRgb;
+            margin: 40px 0;
+            &:first-child {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*
+----------- sideMid --------------
+*/
+.sideBottom {
+  &_con {
+    padding: 0 80px;
+    margin: 20px 0;
+    > div {
+      min-width: 220px;
+      h2 {
+        font-size: 18px;
+        color: @BlackRgbO;
+        display: inline-block;
+      }
+      i {
+        font-size: 20px;
+        float: right;
+        color: @BlackRgb;
+      }
+    }
+  }
+}
+.sideMid,
+.sideBottom {
+  i {
+    font-size: 20px;
+    float: right;
+    color: @BlackRgb;
+    transition: all 200ms ease;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+}

@@ -4,46 +4,41 @@
 **/
 let menuList = [
   {
-    path: "",
+    key: "/home",
     name: "首页",
     icon: "el-icon-location"
   },
   {
-    path: "/userConfig",
-    name: "账户设置",
+    key: "/userConfig",
+    name: "用户设置",
     icon: "el-icon-menu"
   },
   {
-    path: "/sysConfig",
-    name: "系统设置",
+    key: "/sysConfig",
+    name: "账户设置",
     icon: "el-icon-setting",
     child: [
       {
-        path: "/sysConfig/permission",
+        key: "/sysConfig/sysConfigpermission",
         name: "权限设置",
       },
       {
-        path: "/sysConfig/log",
+        key: "/sysConfig/sysConfiglog",
         name: "日志管理",
       }
     ]
   },
   {
-    path: "/userConfigO",
-    name: "账户设置",
-    icon: "el-icon-menu"
-  },
-  {
-    path: "/sysConfig",
+    key: "/userConfig",
     name: "系统设置",
     icon: "el-icon-setting",
     child: [
       {
-        path: "/permissionR",
+        key: "/userConfig/permission",
         name: "权限设置",
       },
       {
-        path: "/logR",
+        key: "/userConfig/log",
         name: "日志管理",
       }
     ]
