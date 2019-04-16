@@ -20,7 +20,7 @@
             </el-dropdown-menu>
           </el-dropdown>
         </div>
-        <div class='menu'>
+        <div class='list'>
           <i class='iconfont icon-mulu1'></i>
         </div>
       </div>

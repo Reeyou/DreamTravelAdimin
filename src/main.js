@@ -12,6 +12,19 @@ import {
   Select,
   Option,
   OptionGroup,
+  Input,
+  InputNumber,
+  Table,
+  TableColumn,
+  DatePicker,
+  TimeSelect,
+  TimePicker,
+  Form,
+  FormItem,
+  Tabs,
+  TabPane,
+  Tag,
+  Button
 } from 'element-ui'
 
 Vue.config.productionTip = false
@@ -26,6 +39,20 @@ Vue.use(DropdownItem)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(OptionGroup)
+Vue.use(Input)
+Vue.use(InputNumber)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(DatePicker)
+Vue.use(TimeSelect)
+Vue.use(TimePicker)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Tag)
+Vue.use(Button)
+
 
 /* eslint-disable no-new */
 new Vue({

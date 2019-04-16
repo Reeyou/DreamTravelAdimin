@@ -9,24 +9,9 @@ let menuList = [
     icon: "el-icon-location"
   },
   {
-    key: "/account",
-    name: "账户设置",
+    key: "/accountManage",
+    name: "账户管理",
     icon: "el-icon-menu"
-  },
-  {
-    key: "/sysConfig",
-    name: "账户设置",
-    icon: "el-icon-setting",
-    child: [
-      {
-        key: "/sysConfig/sysConfigpermission",
-        name: "权限设置",
-      },
-      {
-        key: "/sysConfig/sysConfiglog",
-        name: "日志管理",
-      }
-    ]
   },
   {
     key: "/sysConfig",
@@ -34,19 +19,15 @@ let menuList = [
     icon: "el-icon-setting",
     child: [
       {
-        key: "/sysConfig/accountManage",
-        name: "账户管理",
-      },
-      {
-        key: "/sysConfig/roleManage",
+        key: "/roleManage",
         name: "角色管理",
       },
       {
-        key: "/sysConfig/permissionManage",
+        key: "/permissionManage",
         name: "权限管理",
       },
       {
-        key: "/sysConfig/logManage",
+        key: "/logManage",
         name: "日志管理",
       }
     ]
