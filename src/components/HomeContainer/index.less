@@ -5,7 +5,7 @@
 */
 .conNav {
   &_con {
-    padding: 20px 60px;
+    padding: @bodyPadding;
     .container,
     .select {
       padding-top: 14px;
@@ -47,30 +47,38 @@
   }
 }
 .conList {
-  padding: 28px 60px;
+  padding: @bodyPadding;
   .prev,
   .next {
     width: 100%;
     text-align: center;
     i {
       font-size: 36px;
-      padding: 6px 12px;
+      padding: 2px 12px;
       color: @BlackRgbO;
+      position: relative;
       transition: all 300ms ease;
       &:hover {
-        background: #fff;
+        background: rgba(255,255,255,.8);
         border-radius: 4px;
         color: @BlackRgb;
         cursor: pointer;
+        animation: none;
       }
     }
   }
   .prev {
-    margin-bottom: 14px;
+    margin-bottom: 4px;
+    i {
+      animation: prevWaiting 800ms alternate infinite;
+    }
   }
   .next {
-    box-sizing: border-box;
-    padding-top: 14px;
+    // box-sizing: border-box;
+    padding-top: 4px;
+    i {
+      animation: nextWaiting 800ms alternate infinite;
+    }
   }
   .list {
     width: 100%;
@@ -86,6 +94,9 @@
         align-items: center;
         transition: all 400ms ease;
         box-shadow: 0 2px 0 0 @BlackRgbOO;
+        &:last-child {
+          box-shadow: 0 0 0 0 transparent;
+        }
         &:hover {
           background: #fff;
           cursor: pointer;

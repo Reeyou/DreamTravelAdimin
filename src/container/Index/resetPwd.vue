@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import navHeader from '../../components/Header'
+import navHeader from '../../components/index/Header'
 export default {
   name: 'login',
   data () {

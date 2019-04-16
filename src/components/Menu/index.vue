@@ -1,9 +1,15 @@
 <template>
   <div class='menu'>
+    <nvHead
+      :isHome='true'
+      :welcomeTip='false'
+    />
     <el-menu
       default-active="0"
       class="el-menu-vertical-demo"
       :collapse="isCollapse"
+      text-color='#1f1f2194'
+      active-text-color='#1f1f21'
       router
     >
     <div>
@@ -38,6 +44,7 @@
 </template>
 
 <script>
+import nvHead from '../index/Header'
 import menuConfig from '@/config/Menu.js'
 export default {
   name: 'menu',
@@ -47,6 +54,9 @@ export default {
       // isCollapse: true
       isCollapse: false
     }
+  },
+  components: {
+    nvHead
   }
 }
 </script>

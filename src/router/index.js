@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Routers from '../config/Router'
 import Index from '@/container/Index'
 import Login from '@/container/Index/login'
 import Register from '@/container/Index/register'
 import ResetPwd from '@/container/Index/ResetPwd'
-import Home from '@/container/Home/index'
+
 
 Vue.use(Router)
 
@@ -14,37 +15,6 @@ export default new Router({
     {path: '/login', name: 'Login', component: Login},
     {path: '/register', name: 'Register', component: Register},
     {path: '/resetPwd', name: 'ResetPwd', component: ResetPwd},
-    {path: '/home', name: 'Home', component: Home},
-    {path: '/userConfig', name: 'Home', component: Home},
-    {
-      path: '/userConfig',
-      name: 'Home',
-      component: Home,
-      children: [
-        {
-          path: 'permission',
-          component: Home
-        },
-        {
-          path: 'log',
-          component: Home
-        }
-      ]
-    },
-    {
-      path: '/sysConfig',
-      name: 'sysConfig',
-      component: Home,
-      children: [
-        {
-          path: 'sysConfigpermission',
-          component: Home
-        },
-        {
-          path: 'sysConfiglog',
-          component: Home
-        }
-      ]
-    }
+    ...Routers
   ]
 })
