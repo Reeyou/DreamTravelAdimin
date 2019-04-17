@@ -1,15 +1,19 @@
 <template>
-  <div class='account'>
-    <Page 
-      :title="title"
-      :columns='columns'
-      :filters='filters'
-    />
+  <div>
+    <Menu />
+    <div class='account'>
+      <Page 
+        :title="title"
+        :columns='columns'
+        :filters='filters'
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import Page from '../template/PageTable'
+import Page from '../Template/PageTable'
+import Menu from '../../components/Menu'
 
 export default {
   name: 'Account',
@@ -20,49 +24,45 @@ export default {
         {
           label: '账户',
           dataIndex: '13433957437',
-          width: 319
+          width: 200
         },
         {
           label: '账户姓名',
           dataIndex: 'Reeyou',
-          width: 319
+          // width: 200
         },
         {
           label: '目的地',
           dataIndex: '三亚',
-          width: 319
+          // width: 200
         },
         {
           label: '出发时间',
           dataIndex: '2019-10-20',
-          width: 319
+          // width: 200
         },
         {
           label: '操作',
           dataIndex: '编辑',
-          width: 319
+          width: 200
         }
       ],
       filters: [
         {
           label: '账户',
           type: 'input',
-          width: 319
         },
         {
           label: '账户姓名',
           type: 'input',
-          width: 319
         },
         {
           label: '目的地',
           type: 'input',
-          width: 319
         },
         {
           label: '状态',
           type: 'select',
-          width: 319,
           selectList: [
             {
               value: '',
@@ -81,13 +81,13 @@ export default {
         {
           label: '出发时间',
           type: 'datePicker',
-          width: 319
         }
       ]
     }
   },
   components: {
-    Page
+    Page,
+    Menu
   }
 }
 </script>

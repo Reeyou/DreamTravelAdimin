@@ -9,21 +9,18 @@
   margin-bottom: 40px;
   width: 100%;
   .nav {
-    width: 200px;
     height: 70px;
     line-height: 70px;
-    float: right;
-    position: absolute;
-    right: 20px;
+    padding: @sidePadding;
     &_container {
-      width: 160px;
+      width: 120px;
       height: 70px;
-      margin: 0 auto;
-      text-align: center;
+      float: right;
       .user {
         display: inline-block;
         width: 40px;
         height: 70px;
+        margin: 0 40px 0 0;
         .el-dropdown {
           width: 100px;
           height: 54px;
@@ -48,8 +45,9 @@
       .list {
         display: inline-block;
         width: 40px;
-        margin: 0 0 0 60px;
+        
         vertical-align: middle;
+        text-align: right;
         i {
           font-size: 24px;
         }
@@ -76,7 +74,7 @@
   }
   &_con {
     height: 100%;
-    padding: 0 60px;
+    padding: @sidePadding;
     &_top,
     &_bottom {
       height: 50%;
@@ -126,7 +124,7 @@
 */
 .sideBottom {
   &_con {
-    padding: 0 80px;
+    padding: @sidePadding;
     margin: 20px 0;
     > div {
       min-width: 220px;

@@ -54,8 +54,9 @@
     <div class='table'>
       <el-table
         :data='column'
-        border
+        fit
         style="width: 100%"
+        :header-cell-style="{background:'#fafafa',color:'#000',fontWeight: 600}"
       >
         <el-table-column
           v-for='(column, index) in dataColumns'
@@ -64,9 +65,23 @@
           :label="column.label"
           :width="column.width"
           align='center'
+          fit
         >
         </el-table-column>
       </el-table>
+    </div>
+    <div class="pageFooter">
+      <div class='pagination'>
+        <el-pagination
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          :current-page="currentPage4"
+          :page-sizes="[100, 200, 300, 400]"
+          :page-size="100"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="400">
+        </el-pagination>
+      </div>
     </div>
   </div>
 </template>
@@ -81,6 +96,7 @@ export default {
     return {
       dataColumns: this.columns || [],
       column: [],
+      total: 4,
       dataTitle: this.title,
       dataFilters: this.filters,
       pickerOptions2: {
@@ -115,10 +131,16 @@ export default {
   mounted() {
     console.log(this.dataFilters)
   },
-  computed: {
+  methods: {
     // column: this.dataColumns.map((item, index) => {
     //   item.dataIndex
     // })
+    handleSizeChange(val) {
+      console.log(`每页 ${val} 条`);
+    },
+    handleCurrentChange(val) {
+      console.log(`当前页: ${val}`);
+    }
   },
   components: {
    
@@ -142,7 +164,7 @@ export default {
   }
   .filter {
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: @tablePadding;
     width: 100%;
     .el-form {
       .el-form-item {
@@ -181,6 +203,16 @@ export default {
   }
   .table {
     padding: @tablePadding;
-  } 
+  }
+  .pageFooter {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: @tablePadding;
+    .pagination {
+      float: right;
+    }
+  }
 }
 </style>

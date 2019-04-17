@@ -25,6 +25,7 @@
 //Body style
 @bodyPadding: 34px 34px;
 @listPadding: 0 34px;
+@sidePadding: 0 60px;
 @bodyMargin: 240px;
 @tablePadding: 10px 28px;
 .bodyStyle() {
@@ -33,6 +34,11 @@
   background: @bgWhite;
   box-sizing: border-box;
   height: 100vh;
+}
+.clearFix {
+  clear: both;
+  font-size: 0;
+  overflow: hidden;
 }
 
 //导航栏按钮出现动画

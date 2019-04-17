@@ -24,7 +24,8 @@ import {
   Tabs,
   TabPane,
   Tag,
-  Button
+  Button,
+  Pagination
 } from 'element-ui'
 
 Vue.config.productionTip = false
@@ -52,6 +53,7 @@ Vue.use(Tabs)
 Vue.use(TabPane)
 Vue.use(Tag)
 Vue.use(Button)
+Vue.use(Pagination)
 
 
 /* eslint-disable no-new */
