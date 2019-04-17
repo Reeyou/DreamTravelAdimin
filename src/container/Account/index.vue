@@ -1,7 +1,10 @@
 <template>
-  <div>
+  <div class='account'>
     <Menu />
-    <div class='account'>
+    <div class="navComponent">
+      <sideNav />
+    </div>
+    <div class='account_container'>
       <Page 
         :title="title"
         :columns='columns'
@@ -14,6 +17,7 @@
 <script>
 import Page from '../Template/PageTable'
 import Menu from '../../components/Menu'
+import sideNav from '../../components/RightSide/sideNav'
 
 export default {
   name: 'Account',
@@ -44,7 +48,7 @@ export default {
         {
           label: '操作',
           dataIndex: '编辑',
-          width: 200
+          // width: 200
         }
       ],
       filters: [
@@ -87,7 +91,8 @@ export default {
   },
   components: {
     Page,
-    Menu
+    Menu,
+    sideNav
   }
 }
 </script>
@@ -96,10 +101,23 @@ export default {
 @import '../../assets/css/common.less';
 
 .account {
-  .bodyStyle;
-  p {
-    font-size: 20px;
-    color: #000;
+  font-size: 0;
+  display: inline-block;
+  &_container {
+    .tableStyle;
+    p {
+      font-size: 20px;
+      color: #000;
+    }
   }
+  .navComponent {
+    background: @bgWhite;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.sideNav {
+  margin-bottom: 0;    
+  margin-left: 240px;
 }
 </style>

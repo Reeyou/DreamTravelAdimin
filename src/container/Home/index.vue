@@ -1,6 +1,11 @@
 <template>
   <div class='Home'>
-    <Menu />
+    <Menu>
+      <nvHead
+        :isHome='true'
+        :welcomeTip='false'
+      />  
+    </Menu>
     <div class='container'>
       <HomeMid class='container_home' />
       <Side class='container_side' />
@@ -12,7 +17,7 @@
 import HomeMid from '../../components/HomeContainer'
 import Side from '../../components/RightSide'
 import Menu from '../../components/Menu'
-
+import nvHead from '../../components/index/Header'
 export default {
   name: 'Home',
   data () {
@@ -23,7 +28,8 @@ export default {
   components: {
     HomeMid,
     Side,
-    Menu
+    Menu,
+    nvHead
   }
 }
 </script>

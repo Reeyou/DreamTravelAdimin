@@ -23,7 +23,8 @@
           >
             <el-option
               v-for='(status, index) in filter.selectList'
-              :key='index' :label="status.label"
+              :key='index' 
+              :label="status.label"
               :value="status.value"
             ></el-option>
           </el-select>
@@ -40,8 +41,8 @@
           </el-date-picker>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">筛选</el-button>
-          <el-button type="primary" @click="onSubmit">重置</el-button>
+          <el-button type="primary">筛选</el-button>
+          <el-button type="primary">重置</el-button>
           <div class='collapse'>
             <span>收起</span>
             <i class='iconfont icon-arrow_u'></i>
@@ -57,6 +58,7 @@
         fit
         style="width: 100%"
         :header-cell-style="{background:'#fafafa',color:'#000',fontWeight: 600}"
+        :row-style="{background:'transparent'}"
       >
         <el-table-column
           v-for='(column, index) in dataColumns'
@@ -65,7 +67,6 @@
           :label="column.label"
           :width="column.width"
           align='center'
-          fit
         >
         </el-table-column>
       </el-table>
@@ -75,7 +76,6 @@
         <el-pagination
           @size-change="handleSizeChange"
           @current-change="handleCurrentChange"
-          :current-page="currentPage4"
           :page-sizes="[100, 200, 300, 400]"
           :page-size="100"
           layout="total, sizes, prev, pager, next, jumper"
@@ -151,7 +151,7 @@ export default {
 <style lang='less'>
 @import '../../assets/css/common.less';
 .page {
-  background: #fff;
+  // background: #fff;
   .title {
     height: 60px;
     border-bottom: @borderGray;
@@ -175,12 +175,16 @@ export default {
         margin-right: 0;
         padding: 0 12px;
         &__content {
+          input {
+            background: transparent;
+          }
           flex: 1;
           .el-select {
             width: 100%;
           }
           .el-date-editor.el-input__inner {
             width: 100%;
+            background: transparent;
           }
         }
         &__label {
@@ -203,6 +207,9 @@ export default {
   }
   .table {
     padding: @tablePadding;
+    .el-table__empty-block {
+      background: @bgWhite;
+    }
   }
   .pageFooter {
     height: 40px;
@@ -212,7 +219,13 @@ export default {
     padding: @tablePadding;
     .pagination {
       float: right;
+      input, button, li {
+        background: transparent;
+      }
     }
   }
+}
+input {
+  background: transparent;
 }
 </style>

@@ -14,7 +14,7 @@
 @borderWhite: 1px solid rgba(255,255,255,.5);
 
 //font color
-@Black: hsl(240, 3%, 13%);
+@Black: rgb(32, 32, 34);
 @White: #fff;
 @WhiteRgb: rgba(255,255,255,.5);
 @BlackRgb: rgba(31, 31, 33, 0.58);
@@ -23,7 +23,8 @@
 @Blue: #409EFF;
 
 //Body style
-@bodyPadding: 34px 34px;
+@bodyPadding: 28px 28px 0 28px;
+@tablePadding: 28px 28px 0 28px;
 @listPadding: 0 34px;
 @sidePadding: 0 60px;
 @bodyMargin: 240px;
@@ -33,7 +34,14 @@
   padding: @bodyPadding;
   background: @bgWhite;
   box-sizing: border-box;
-  height: 100vh;
+  height: calc(100vh - 70px);
+}
+.tableStyle() {
+  margin-left: @bodyMargin;
+  padding: @tablePadding;
+  background: @bgWhite;
+  box-sizing: border-box;
+  height: calc(100vh - 70px);
 }
 .clearFix {
   clear: both;

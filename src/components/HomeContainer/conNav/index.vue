@@ -7,7 +7,7 @@
         <p class='increase'>￥20.0000000</p>
       </div>
       <div class="select">
-        <el-select v-model="value" :placeholder="value">
+        <el-select :placeholder="value">
           <el-option
             v-for="item in options"
             :key="item.value"
