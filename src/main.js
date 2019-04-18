@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import vuex from 'vuex'
+import store from './vuex/store.js'
 import {
   Menu,
   Submenu,
@@ -30,6 +32,7 @@ import {
 
 Vue.config.productionTip = false
 
+Vue.use(vuex)
 Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
@@ -60,6 +63,7 @@ Vue.use(Pagination)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

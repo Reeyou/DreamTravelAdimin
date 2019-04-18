@@ -43,6 +43,8 @@ export default {
   methods: {
     login() {
       this.$router.push({path: '/home'})
+      sessionStorage.setItem('loginState', true)
+      this.$store.state.loginState = true
     }
   },
   components: {

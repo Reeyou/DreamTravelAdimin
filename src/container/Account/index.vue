@@ -1,8 +1,7 @@
 <template>
   <div>
-    <Menu />
     <div class='account'>
-      <Page 
+      <PageTable 
         :title="title"
         :columns='columns'
         :filters='filters'
@@ -12,9 +11,7 @@
 </template>
 
 <script>
-import Page from '../Template/PageTable'
-import Menu from '../../components/Menu'
-
+import PageTable from '../Template/PageTable'
 export default {
   name: 'Account',
   data () {
@@ -86,8 +83,7 @@ export default {
     }
   },
   components: {
-    Page,
-    Menu
+    PageTable
   }
 }
 </script>

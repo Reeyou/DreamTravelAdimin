@@ -15,7 +15,7 @@
               </el-dropdown-item>
               <el-dropdown-item>
                 <i></i>
-                <span>退出登录</span>
+                <span @click='exitLogin'>退出登录</span>
               </el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
@@ -33,6 +33,12 @@ export default {
   name: 'sideNav',
   data () {
     return {
+    }
+  },
+  methods: {
+    exitLogin() {
+      this.$router.push({path: '/'})
+      this.$store.state.loginState = false
     }
   }
 }

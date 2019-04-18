@@ -1,17 +1,19 @@
 <template>
   <div id="app" v-cloak>
-    <!-- <Menu /> -->
+    <Menu v-if='loginState' />
     <router-view/>
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu'
+import { mapState } from 'vuex'
 export default {
   name: 'App',
   components: {
     Menu
-  }
+  },
+  computed: mapState(['loginState'])
 }
 </script>
 

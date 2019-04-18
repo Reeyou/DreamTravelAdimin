@@ -1,6 +1,5 @@
 <template>
   <div class='Home'>
-    <Menu />
     <div class='container'>
       <HomeMid class='container_home' />
       <Side class='container_side' />
@@ -11,7 +10,6 @@
 <script>
 import HomeMid from '../../components/HomeContainer'
 import Side from '../../components/RightSide'
-import Menu from '../../components/Menu'
 
 export default {
   name: 'Home',
@@ -22,8 +20,7 @@ export default {
   },
   components: {
     HomeMid,
-    Side,
-    Menu
+    Side
   }
 }
 </script>
