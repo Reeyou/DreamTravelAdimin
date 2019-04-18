@@ -13,6 +13,7 @@ export default {
   components: {
     Menu
   },
+  //获取loginState
   computed: mapState(['loginState'])
 }
 </script>

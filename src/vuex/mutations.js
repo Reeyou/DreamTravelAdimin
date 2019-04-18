@@ -1,6 +1,9 @@
 const mutations = {
-  showSideBar: (state) => {
-    state.loginState = !state.loginState
+  exitLogin: (state, loginVisble) => {
+    state.loginState = loginVisble
+  },
+  login: (state) => {
+    state.loginState = sessionStorage.getItem('loginState')
   }
 }
 

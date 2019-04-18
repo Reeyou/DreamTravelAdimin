@@ -8,6 +8,7 @@ Vue.use(Vuex)
 
 // 初始化数据
 let state = {
+  // 登录状态
   loginState: sessionStorage.getItem('loginState')
 }
 

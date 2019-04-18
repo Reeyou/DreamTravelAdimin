@@ -14,6 +14,11 @@ let menuList = [
     icon: "el-icon-menu"
   },
   {
+    key: "/payManage",
+    name: "支付管理",
+    icon: "el-icon-menu"
+  },
+  {
     key: "/sysConfig",
     name: "系统设置",
     icon: "el-icon-setting",

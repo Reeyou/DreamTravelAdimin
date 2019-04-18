@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'sideNav',
   data () {
@@ -36,9 +37,13 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['exitLogin']),
+    // 退出登录
     exitLogin() {
       this.$router.push({path: '/'})
-      this.$store.state.loginState = false
+      this.$store.commit('exitLogin', false)
+      // this.$store.state.loginState = false
+      // sessionStorage.setItem('loginState', false)
     }
   }
 }

@@ -29,6 +29,7 @@
 
 <script>
 import navHeader from '../../components/index/Header'
+import { mapMutations } from 'vuex'
 export default {
   name: 'login',
   data () {
@@ -41,10 +42,12 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['login']),
+    // 登录
     login() {
-      this.$router.push({path: '/home'})
       sessionStorage.setItem('loginState', true)
-      this.$store.state.loginState = true
+      this.$store.commit('login')
+      this.$router.push({path: '/home'})
     }
   },
   components: {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class='log'>
+    <div class='pay'>
       <PageTable 
         :title="title"
         :columns='columns'
@@ -11,15 +11,15 @@
 </template>
 
 <script>
-import PageTable from '../../Template/PageTable'
+import PageTable from '../Template/PageTable'
 export default {
-  name: 'Log',
+  name: 'pay',
   data () {
     return {
-      title: '日志管理',
+      title: '支付列表',
       columns: [
         {
-          label: 'ip地址',
+          label: '账户',
           dataIndex: '13433957437',
           width: 200
         },
@@ -29,30 +29,20 @@ export default {
           // width: 200
         },
         {
-          label: '状态',
+          label: '目的地',
           dataIndex: '三亚',
           // width: 200
         },
         {
-          label: '行为',
+          label: '出发时间',
           dataIndex: '2019-10-20',
           // width: 200
         },
         {
-          label: '路径',
+          label: '操作',
           dataIndex: '编辑',
           width: 200
-        },
-        {
-          label: '返回信息',
-          dataIndex: '2019-10-20',
-          // width: 200
-        },
-        {
-          label: '操作时间',
-          dataIndex: '2019-10-20',
-          // width: 200
-        },
+        }
       ],
       filters: [
         {
@@ -99,9 +89,9 @@ export default {
 </script>
 
 <style scoped lang='less'>
-@import '../../../assets/css/common.less';
+@import '../../assets/css/common.less';
 
-.log {
+.pay {
   .bodyStyle;
   p {
     font-size: 20px;

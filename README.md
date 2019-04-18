@@ -4,5 +4,19 @@
 ### 管理平台后端接口  springboot + springCloud + mySql + mybatis + jdbc
 
 ## 开始
-````
- 参加工作以来都是做着分配的工作，公司用的react技术栈，自己开始接触的是vue，到现在感觉技术有** 了一点提升，开始构想着独立开发一个自己脑海中的产品，从小到大，从前端点滴到后台实践，记录自己** 历程，记录自己实现的想法
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8000
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
